@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("canvas");
 const canvasContext = canvas.getContext("2d");
 
@@ -76,7 +77,8 @@ let update = () => {
       Math.random() * canvas.width,
       canvas.height * Math.random() * 70,
       fireworkRadius,
-      3 * (Math.random() - 0.5), -12
+      3 * (Math.random() - 0.5), -12,
+      colors[Math.floor(Math.random() * colors.length)]
     );
 
     fireworks.push(firework);
@@ -104,5 +106,7 @@ let draw = () => {
     firework.draw()
   });
 };
+
+animate()
 
 
