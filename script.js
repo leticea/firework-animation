@@ -52,9 +52,9 @@ let initializeCount = 0;
 let maximumInitialize = 1;
 
 let initDelay = 1000 // ms;
-let fireworkRadius = 3;
-let particleCount = 100;
-let speedMultiplier = 7;
+let fireworkRadius = 4;
+let particleCount = 200;
+let speedMultiplier = 10;
 
 let createSubFireworks = (x, y, count, color, speedMultiplier) => {
   let created = 0;
