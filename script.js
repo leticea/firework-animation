@@ -97,7 +97,7 @@ let update = () => {
   fireworks.forEach((firework, i) => {
     if (firework.opacity <= 0.1) {
       fireworks.splice(i, 1);
-      createSubFireworks(firework.x, firework.y, particleCount, firework.color);
+      createSubFireworks(firework.x, firework.y, particleCount, firework.color, speedMultiplier);
 
     } else {
       firework.update();
