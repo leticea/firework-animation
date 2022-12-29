@@ -21,6 +21,26 @@ class Firework {
   }
 
   draw() {
-    
+
   }
-}
+};
+
+let animate = () => {
+  requestAnimationFrame(animate)
+  update()
+  draw()
+};
+
+let colors = ["Blue", "Orange", "Red", "Purple", "Green"];
+let initializeCount = 0;
+let maximumInitialize = 1;
+
+let update = () => {
+
+};
+
+let draw = () => {
+
+};
+
+
