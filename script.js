@@ -65,7 +65,7 @@ let createSubFireworks = (x, y, count, color, speedMultiplier) => {
       x, y, fireworkRadius,
       Math.cos(radians * created) * Math.random() * speedMultiplier,
       Math.sin(radians * created) * Math.random() * speedMultiplier, 
-      color    
+      colors[Math.floor(Math.random() * colors.length)]    
     )
 
     subFireworks.push(firework);
@@ -74,7 +74,7 @@ let createSubFireworks = (x, y, count, color, speedMultiplier) => {
 };
 
 let update = () => {
-  canvasContext.fillStyle = "rgba(10, 0, 0, 0.5)"; // this will give tail effect
+  canvasContext.fillStyle = "rgba(10, 0, 0, 0.1)"; // this will give tail effect;
   canvasContext.fillRect(0, 0, canvas.width, canvas.height);
   if (initializeCount < maximumInitialize) {
     let firework = new Firework(
