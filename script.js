@@ -103,7 +103,14 @@ let update = () => {
     }
   });
 
-  
+  subFireworks.forEach((firework, i) => {
+    if (firework.opacity <= 0) {
+      subFireworks.splice(i, 1)
+
+    } else {
+      firework.update();
+    }
+  });
 };
 
 let draw = () => {
