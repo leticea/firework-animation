@@ -44,8 +44,17 @@ let update = () => {
   canvasContext.fillStyle = "rgba(0, 0, 0, 0.5)"; // this will give tail effect
   canvasContext.fillRect(0, 0, canvas.width, canvas.height);
   if (initializeCount < maximumInitialize) {
-    
+
   }
+  
+  fireworks.forEach((firework, i) => {
+    if (firework.opacity <= 0.1) {
+
+
+    } else {
+
+    }
+  });
 };
 
 let draw = () => {
