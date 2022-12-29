@@ -15,7 +15,6 @@ class Firework {
     this.velocityX = velocityX;
     this.velocityY = velocityY;
     this.color = color;
-    this.color = "Blue";
     this.opacity = 1;
   }
 
@@ -53,7 +52,7 @@ let initializeCount = 0;
 let maximumInitialize = 1;
 
 let initDelay = 500 // ms;
-let fireworkRadius = 5;
+let fireworkRadius = 10;
 let particleCount = 20;
 let speedMultiplier = 7;
 
@@ -67,6 +66,9 @@ let createSubFireworks = (x, y, count, speedMultiplier) => {
       Math.cos(radians * created) * Math.random() * speedMultiplier,
       Math.sin(radians * created) * Math.random() * speedMultiplier    
     )
+
+    subFireworks.push(firework);
+    created++;
   }
 };
 
@@ -94,12 +96,14 @@ let update = () => {
   fireworks.forEach((firework, i) => {
     if (firework.opacity <= 0.1) {
       fireworks.splice(i, 1);
-      createSubFireworks();
+      createSubFireworks(firework.x, firework.y, particleCount, firework.color);
 
     } else {
       firework.update();
     }
   });
+
+  
 };
 
 let draw = () => {
