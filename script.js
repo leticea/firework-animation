@@ -56,7 +56,7 @@ let fireworkRadius = 10;
 let particleCount = 20;
 let speedMultiplier = 7;
 
-let createSubFireworks = (x, y, count, speedMultiplier) => {
+let createSubFireworks = (x, y, count, color, speedMultiplier) => {
   let created = 0;
   let radians = (Math.PI * 2) / count;
 
@@ -64,7 +64,8 @@ let createSubFireworks = (x, y, count, speedMultiplier) => {
     let firework = new Firework(
       x, y, fireworkRadius,
       Math.cos(radians * created) * Math.random() * speedMultiplier,
-      Math.sin(radians * created) * Math.random() * speedMultiplier    
+      Math.sin(radians * created) * Math.random() * speedMultiplier, 
+      color    
     )
 
     subFireworks.push(firework);
