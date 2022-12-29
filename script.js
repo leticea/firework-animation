@@ -15,6 +15,7 @@ class Firework {
     this.velocityX = velocityX;
     this.velocityY = velocityY;
     this.color = color;
+    this.color = "Blue";
     this.opacity = 1;
   }
 
@@ -34,7 +35,7 @@ class Firework {
     canvasContext.globalAlpha = this.opacity;
     canvasContext.beginPath(); // clears the current internal path object and its sub-paths;
     canvasContext.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false) // arc = creates an arc/curve (used to create circles, or parts of circle);
-    canvasContext.fillStyle = color;
+    canvasContext.fillStyle = this.color;
     canvasContext.fill();
     canvasContext.closePath(); // connects the current path, or sub-path, position with the first point on that path created either with beginPath() or moveTo() if that was used; 
     canvasContext.restore();
@@ -96,7 +97,7 @@ let update = () => {
       createSubFireworks();
 
     } else {
-      fireworks.update();
+      firework.update();
     }
   });
 };
