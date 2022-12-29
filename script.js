@@ -35,13 +35,17 @@ let colors = ["Blue", "Orange", "Red", "Purple", "Green"];
 let initializeCount = 0;
 let maximumInitialize = 1;
 
-let initDelay = 500 / ms;
+let initDelay = 500 // ms;
 let fireworkRadius = 5;
 let particleCount = 20;
 let speedMultiplier = 7;
 
 let update = () => {
-
+  canvasContext.fillStyle = "rgba(0, 0, 0, 0.5)"; // this will give tail effect
+  canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+  if (initializeCount < maximumInitialize) {
+    
+  }
 };
 
 let draw = () => {
