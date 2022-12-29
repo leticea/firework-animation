@@ -100,7 +100,9 @@ let update = () => {
 };
 
 let draw = () => {
-
+  fireworks.forEach(firework => {
+    firework.draw()
+  });
 };
 
 
