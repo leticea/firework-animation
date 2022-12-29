@@ -65,7 +65,14 @@ let update = () => {
       fireworkRadius,
       3 * (Math.random() - 0.5), -12
     );
+
     fireworks.push(firework);
+
+    setTimeout(() => {
+      initializeCount--;
+    }, initDelay);
+    
+    initializeCount++;
   }
 
   fireworks.forEach((firework, i) => {
