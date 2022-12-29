@@ -51,9 +51,9 @@ let colors = ["Blue", "Orange", "Red", "Purple", "Green"];
 let initializeCount = 0;
 let maximumInitialize = 1;
 
-let initDelay = 500 // ms;
-let fireworkRadius = 10;
-let particleCount = 20;
+let initDelay = 1000 // ms;
+let fireworkRadius = 3;
+let particleCount = 100;
 let speedMultiplier = 7;
 
 let createSubFireworks = (x, y, count, color, speedMultiplier) => {
