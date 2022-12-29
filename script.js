@@ -55,6 +55,10 @@ let fireworkRadius = 5;
 let particleCount = 20;
 let speedMultiplier = 7;
 
+let createSubFireworks = (x, y, count, speedMultiplier) => {
+
+};
+
 let update = () => {
   canvasContext.fillStyle = "rgba(0, 0, 0, 0.5)"; // this will give tail effect
   canvasContext.fillRect(0, 0, canvas.width, canvas.height);
@@ -71,16 +75,17 @@ let update = () => {
     setTimeout(() => {
       initializeCount--;
     }, initDelay);
-    
+
     initializeCount++;
   }
 
   fireworks.forEach((firework, i) => {
     if (firework.opacity <= 0.1) {
-
+      fireworks.splice(i, 1);
+      createSubFireworks();
 
     } else {
-
+      fireworks.update();
     }
   });
 };
