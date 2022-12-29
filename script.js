@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById("canvas");
 const canvasContext = canvas.getContext("2d");
 
@@ -42,9 +41,9 @@ class Firework {
 };
 
 let animate = () => {
-  requestAnimationFrame(animate)
-  update()
-  draw()
+  requestAnimationFrame(animate);
+  update();
+  draw();
 };
 
 let colors = ["Blue", "Orange", "Red", "Purple", "Green"];
