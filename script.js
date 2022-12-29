@@ -115,8 +115,12 @@ let update = () => {
 
 let draw = () => {
   fireworks.forEach(firework => {
-    firework.draw()
+    firework.draw();
   });
+
+  subFireworks.forEach(firework => {
+    firework.draw();
+  })
 };
 
 animate();
